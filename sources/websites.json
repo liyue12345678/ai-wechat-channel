@@ -1,0 +1,55 @@
+{
+  "_说明": "每天需要手动刷的网站，不适合RSS或者RSS不完整的",
+  "daily": [
+    {
+      "name": "Product Hunt AI区",
+      "url": "https://www.producthunt.com/topics/ai",
+      "关注原因": "每天上新AI产品，工具测评素材来源",
+      "时区": "北京时间每天凌晨1点更新"
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "关注原因": "全球技术圈最大讨论区，AI话题热帖必看",
+      "技巧": "用 https://hnrss.org 配合RSS即可"
+    },
+    {
+      "name": "GitHub Trending",
+      "url": "https://github.com/trending",
+      "关注原因": "每天看有没有新AI开源项目爆火",
+      "技巧": "筛选 language:python 看AI相关"
+    },
+    {
+      "name": "ArXiv Sanity",
+      "url": "http://arxiv-sanity.com/",
+      "关注原因": "AI论文热度排行，比直接看ArXiv更友好"
+    }
+  ],
+  "chinese_weekly": [
+    {
+      "name": "量子位",
+      "url": "https://www.qbitai.com/",
+      "关注原因": "国内最全AI资讯"
+    },
+    {
+      "name": "机器之心",
+      "url": "https://www.jiqizhixin.com/",
+      "关注原因": "技术深度更好"
+    },
+    {
+      "name": "36氪AI频道",
+      "url": "https://36kr.com/info/AI",
+      "关注原因": "创投视角"
+    },
+    {
+      "name": "虎嗅科技",
+      "url": "https://www.huxiu.com/channel/104.html",
+      "关注原因": "产业分析"
+    },
+    {
+      "name": "少数派",
+      "url": "https://sspai.com/",
+      "关注原因": "效率工具深度测评"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ai-wechat-channel",
+  "version": "1.0.0",
+  "description": "AI公众号运营系统 - 信息聚合+文章管理",
+  "private": true,
+  "scripts": {
+    "aggregate": "node scripts/aggregator.js",
+    "brief": "node scripts/daily_brief.js",
+    "tracker": "node scripts/update_tracker.js"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

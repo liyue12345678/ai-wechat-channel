@@ -1,0 +1,183 @@
+{
+  "_说明": "每个源的RSS地址，脚本会定时拉取。标记 🔴 的源可能需要科学上网。",
+  "_更新频率": "脚本每天跑一次即可，建议早上8点",
+
+  "feeds": [
+    {
+      "name": "Hacker News (AI相关)",
+      "url": "https://hnrss.org/frontpage?q=AI+OR+LLM+OR+GPT+OR+Claude+OR+Gemini+OR+OpenAI+OR+Anthropic+OR+DeepSeek",
+      "category": "国际资讯",
+      "language": "en",
+      "priority": "high",
+      "note": "🔴 需要VPN。AI圈最重要的信息源，重大消息基本这里首发"
+    },
+    {
+      "name": "The Verge - AI",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "category": "国际资讯",
+      "language": "en",
+      "priority": "high",
+      "note": "🔴 需要VPN。AI产品新闻写得最好的主流媒体（测试通过✅）"
+    },
+    {
+      "name": "TechCrunch - AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "category": "国际资讯",
+      "language": "en",
+      "priority": "high",
+      "note": "🔴 需要VPN。AI融资、创业公司动态（测试通过✅）"
+    },
+    {
+      "name": "Reddit - r/ChatGPT",
+      "url": "https://www.reddit.com/r/ChatGPT/.rss",
+      "category": "社区",
+      "language": "en",
+      "priority": "medium",
+      "note": "🔴 需要VPN。用户真实吐槽和用法，找选题灵感（测试通过✅）"
+    },
+    {
+      "name": "ArXiv - cs.AI",
+      "url": "https://rss.arxiv.org/rss/cs.AI",
+      "category": "论文/技术",
+      "language": "en",
+      "priority": "medium",
+      "note": "论文原文，适合深度内容。不用篇篇看，扫标题找有爆点的"
+    },
+    {
+      "name": "ArXiv - cs.CL (NLP)",
+      "url": "https://rss.arxiv.org/rss/cs.CL",
+      "category": "论文/技术",
+      "language": "en",
+      "priority": "medium",
+      "note": "大模型相关论文集中地"
+    },
+    {
+      "name": "The Verge - AI",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "category": "国际资讯",
+      "language": "en",
+      "priority": "high",
+      "note": "🔴 AI产品新闻写得最好的主流媒体"
+    },
+    {
+      "name": "TechCrunch - AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "category": "国际资讯",
+      "language": "en",
+      "priority": "high",
+      "note": "🔴 AI融资、创业公司动态"
+    },
+    {
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog/rss.xml",
+      "category": "官方动态",
+      "language": "en",
+      "priority": "critical",
+      "note": "🔴 任何更新都值得第一时间出文章"
+    },
+    {
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/feed.xml",
+      "category": "官方动态",
+      "language": "en",
+      "priority": "critical",
+      "note": "🔴 需要VPN。Claude更新，对国内用户越来越重要"
+    },
+    {
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "category": "官方动态",
+      "language": "en",
+      "priority": "high",
+      "note": "Gemini相关更新"
+    },
+    {
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/rss/",
+      "category": "官方动态",
+      "language": "en",
+      "priority": "medium",
+      "note": "🔴 需要VPN。Llama开源模型动态"
+    },
+    {
+      "name": "MIT Technology Review - AI",
+      "url": "https://www.technologyreview.com/feed/",
+      "category": "深度分析",
+      "language": "en",
+      "priority": "medium",
+      "note": "🔴 深度AI产业分析"
+    },
+    {
+      "name": "量子位",
+      "url": "https://www.qbitai.com/feed",
+      "category": "国内资讯",
+      "language": "zh",
+      "priority": "critical",
+      "note": "国内AI资讯最快最全的号，必看"
+    },
+    {
+      "name": "机器之心",
+      "url": "https://www.jiqizhixin.com/api/articles?format=rss",
+      "category": "国内资讯",
+      "language": "zh",
+      "priority": "critical",
+      "note": "技术深度最好的国内AI媒体（需测试RSS格式）"
+    },
+    {
+      "name": "极客公园",
+      "url": "https://www.geekpark.net/rss",
+      "category": "国内资讯",
+      "language": "zh",
+      "priority": "high",
+      "note": "科技+产品视角，与AI工具定位契合"
+    },
+    {
+      "name": "36氪 - AI频道",
+      "url": "https://36kr.com/feed?cid=ai",
+      "category": "国内资讯",
+      "language": "zh",
+      "priority": "high",
+      "note": "创投视角，适合找商业化选题"
+    },
+    {
+      "name": "虎嗅 - AI",
+      "url": "https://www.huxiu.com/rss/0.xml",
+      "category": "国内资讯",
+      "language": "zh",
+      "priority": "medium",
+      "note": "产业分析视角"
+    },
+    {
+      "name": "少数派",
+      "url": "https://sspai.com/feed",
+      "category": "工具/效率",
+      "language": "zh",
+      "priority": "high",
+      "note": "效率工具测评，与AI工具教程高度重合"
+    },
+    {
+      "name": "GitHub Trending (weekly)",
+      "url": "https://rsshub.app/github/trending/weekly",
+      "category": "开源/工具",
+      "language": "en",
+      "priority": "medium",
+      "note": "🔴 需要VPN。发现新AI开源项目的好地方"
+    },
+    {
+      "name": "Product Hunt - AI",
+      "url": "https://rsshub.app/producthunt/today",
+      "category": "新产品",
+      "language": "en",
+      "priority": "high",
+      "note": "🔴 需要VPN。每天新AI产品，工具测评素材金矿"
+    },
+    {
+      "name": "Reddit - r/ChatGPT",
+      "url": "https://www.reddit.com/r/ChatGPT/.rss",
+      "category": "社区",
+      "language": "en",
+      "priority": "medium",
+      "note": "🔴 用户真实吐槽和用法，找选题灵感"
+    }
+  ]
+}
