@@ -38,6 +38,7 @@
 | 11 | AI会让哪些职业消失？2026年真实变化 | opinion.md | ✅ 已写 | 7/3周五 |
 | 12 | DeepSeek vs ChatGPT vs 豆包：写公众号谁更强 | comparison.md | ✅ 已写 | 7/4周六 |
 | 13 | AI周报第2期 | news-roundup.md | ✅ 已写 | 7/5周日 |
+| 14 | 用AI做PPT的5个工具实测对比 | tool-review.md | ✅ 已写 | 7/6周一 |
 
 ### 💡 选题灵感（长期储备）
 
@@ -45,7 +46,7 @@
 
 **工具测评类：**
 - [x] DeepSeek vs ChatGPT vs 豆包：写公众号文章谁更强？→ 7/4已发
-- [ ] 用AI做PPT的5个工具实测对比
+- [x] 用AI做PPT的5个工具实测对比 → 7/6已发
 - [ ] AI绘画工具横评（Midjourney vs SD vs DALL-E）
 - [ ] AI视频生成工具哪家强？
 - [x] 免费AI编程助手实测（Cursor vs Copilot vs 通义灵码）→ 6/29已发
