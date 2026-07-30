@@ -9,6 +9,7 @@
     "tracker": "node scripts/update_tracker.js"
   },
   "dependencies": {
+    "pptxgenjs": "^4.0.1",
     "rss-parser": "^3.13.0"
   }
 }

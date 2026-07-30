@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI元思 — 项目介绍</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.min.css">
+<style>
+  :root {
+    --cyan: #00D4FF;
+    --orange: #FF6B35;
+    --green: #00E676;
+    --red: #FF5252;
+    --purple: #BB86FC;
+  }
+
+  .reveal { font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif; }
+  .reveal h1 { font-size: 2.2em; font-weight: 700; }
+  .reveal h2 { font-size: 1.6em; font-weight: 600; color: var(--cyan); }
+  .reveal h3 { font-size: 1.3em; }
+  .reveal p, .reveal li { font-size: 0.85em; line-height: 1.7; }
+
+  .reveal .slides section { text-align: left; padding: 40px 60px; }
+
+  /* Title slide */
+  .title-slide { text-align: center !important; }
+  .title-slide h1 { font-size: 2.8em; color: var(--cyan); margin-bottom: 0.2em; }
+  .title-slide .subtitle { font-size: 1.2em; color: #aaa; margin-bottom: 0.8em; }
+  .title-slide .tagline { font-size: 1em; color: var(--orange); }
+
+  /* Section dividers */
+  .section-slide { text-align: center !important; }
+  .section-slide h2 { font-size: 2.4em; color: #fff; }
+  .section-slide .section-num { font-size: 4em; font-weight: 900; color: var(--cyan); opacity: 0.3; line-height: 1; }
+
+  /* Tables */
+  .reveal table { font-size: 0.7em; margin: 0 auto; border-collapse: collapse; width: 100%; }
+  .reveal th { background: rgba(0,212,255,0.2); color: var(--cyan); padding: 8px 12px; border: 1px solid #333; }
+  .reveal td { padding: 6px 12px; border: 1px solid #333; vertical-align: top; }
+
+  /* Cards */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+  .card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 18px;
+  }
+  .card .icon { font-size: 1.6em; margin-bottom: 6px; }
+  .card h4 { font-size: 0.9em; margin: 4px 0; color: var(--cyan); }
+  .card p { font-size: 0.7em; color: #bbb; margin: 0; }
+
+  /* Flow diagram */
+  .flow-row { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 20px 0; }
+  .flow-box {
+    background: rgba(0,212,255,0.12);
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 8px;
+    padding: 12px 18px;
+    text-align: center;
+    font-size: 0.75em;
+  }
+  .flow-arrow { color: var(--cyan); font-size: 1.4em; }
+
+  /* Highlight box */
+  .highlight-box {
+    background: rgba(0,212,255,0.08);
+    border-left: 4px solid var(--cyan);
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.85em;
+  }
+
+  /* Colors */
+  .cyan { color: var(--cyan); }
+  .orange { color: var(--orange); }
+  .green { color: var(--green); }
+  .red { color: var(--red); }
+  .purple { color: var(--purple); }
+
+  /* Small text */
+  .small { font-size: 0.65em; color: #888; }
+
+  /* Pain point grid */
+  .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+  .pain-item { text-align: center; padding: 20px; background: rgba(255,82,82,0.08); border-radius: 8px; }
+  .pain-item .emoji { font-size: 2em; display: block; margin-bottom: 8px; }
+
+  /* Stat numbers */
+  .stat-row { display: flex; justify-content: space-around; margin: 20px 0; }
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 2.6em; font-weight: 900; color: var(--cyan); line-height: 1; }
+  .stat-label { font-size: 0.7em; color: #aaa; margin-top: 6px; }
+
+  /* Quote */
+  .quote-box {
+    text-align: center !important;
+    padding: 60px !important;
+  }
+  .quote-box blockquote {
+    font-size: 1.3em;
+    font-style: italic;
+    color: var(--cyan);
+    border-left: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    line-height: 1.6;
+  }
+  .quote-box blockquote::before { content: '"'; }
+  .quote-box blockquote::after { content: '"'; }
+
+  /* Two column */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ==================== 封面 ==================== -->
+<section class="title-slide">
+  <h1>🚀 AI元思</h1>
+  <div class="subtitle">用工程化思维做AI内容</div>
+  <div class="tagline">一个AI公众号的半自动化运营系统</div>
+  <div class="small" style="margin-top:40px;">2026年7月 ｜ 项目介绍演讲</div>
+</section>
+
+<!-- ==================== 开场 ==================== -->
+<section>
+  <h2>先问一个问题</h2>
+  <br>
+  <p style="font-size:1.2em; text-align:center;">如果你想做一个AI领域的公众号，<br><strong>你打算怎么做？</strong></p>
+  <br>
+  <div class="pain-grid">
+    <div class="pain-item">
+      <span class="emoji">🌊</span>
+      <strong>信息太多</strong><br>
+      <span class="small">每天几十条AI新闻<br>该写哪一个？</span>
+    </div>
+    <div class="pain-item">
+      <span class="emoji">📄</span>
+      <strong>白纸焦虑</strong><br>
+      <span class="small">面对空白编辑器<br>每次重新想结构</span>
+    </div>
+    <div class="pain-item">
+      <span class="emoji">🔄</span>
+      <strong>选题撞车</strong><br>
+      <span class="small">写完才发现<br>选题已经有人写了</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 核心思路 ==================== -->
+<section>
+  <h2>解决方案</h2>
+  <br>
+  <div class="highlight-box" style="font-size:1.1em;">
+    <strong>用工程化思维做内容，把公众号当成一个产品来运营。</strong>
+  </div>
+  <br>
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h4>信息采集自动化</h4>
+      <p>解决「写什么」</p>
+    </div>
+    <div class="card">
+      <div class="icon">📝</div>
+      <h4>模板驱动生产</h4>
+      <p>解决「怎么写」</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h4>品牌体系先行</h4>
+      <p>解决「差异化」</p>
+    </div>
+    <div class="card">
+      <div class="icon">📡</div>
+      <h4>多平台分发</h4>
+      <p>解决「传播」</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 第一部分：项目定位 ==================== -->
+<section class="section-slide">
+  <div class="section-num">01</div>
+  <h2>项目定位</h2>
+  <p style="color:#aaa;">谁是我们的读者，我们提供什么价值</p>
+</section>
+
+<section>
+  <h2>一句话定位</h2>
+  <br>
+  <div class="highlight-box" style="font-size:1.3em; text-align:center;">
+    <strong>"用数据说话，让每个普通人都能用好AI"</strong>
+  </div>
+  <br>
+  <p style="text-align:center;">我们不报道「AI行业发生了什么」<br>
+  我们回答<strong class="cyan">「这对你意味着什么，你该怎么用」</strong></p>
+</section>
+
+<section>
+  <h2>差异化定位</h2>
+  <br>
+  <table>
+    <tr><th></th><th>传统AI媒体</th><th class="cyan">AI元思</th></tr>
+    <tr><td>视角</td><td>行业视角，偏技术</td><td class="cyan"><strong>用户视角，偏实用</strong></td></tr>
+    <tr><td>形式</td><td>一次性资讯</td><td class="cyan"><strong>系列化内容，可收藏的工具箱</strong></td></tr>
+    <tr><td>口吻</td><td>官方、第三人称</td><td class="cyan"><strong>真人实测，有主观判断</strong></td></tr>
+    <tr><td>核心问题</td><td>"发生了什么"</td><td class="cyan"><strong>"你该怎么用"</strong></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>目标受众</h2>
+  <br>
+  <p style="text-align:center;font-size:1em;">不是AI从业者，而是<strong class="cyan">对AI感兴趣的普通人</strong></p>
+  <br>
+  <div class="card-grid">
+    <div class="card" style="text-align:center;">
+      <div class="icon">💼</div>
+      <h4>职场人</h4>
+      <p>想用AI提升效率</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="icon">🤔</div>
+      <h4>纠结者</h4>
+      <p>不知道该选哪个AI工具</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="icon">📖</div>
+      <h4>普通用户</h4>
+      <p>想跟上AI趋势但不想读论文</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 第二部分：系统架构 ==================== -->
+<section class="section-slide">
+  <div class="section-num">02</div>
+  <h2>系统架构</h2>
+  <p style="color:#aaa;">四层架构：采集 → 决策 → 生产 → 分发</p>
+</section>
+
+<section>
+  <h2>系统全景图</h2>
+  <br>
+  <div class="flow-row" style="flex-direction:column; gap:0;">
+    <div class="flow-box" style="width:80%;">
+      <div class="cyan">📡 信息采集层</div>
+      <span class="small">22个RSS源 + 手动网站 → 每日简报</span>
+    </div>
+    <div style="color:var(--cyan);font-size:1.2em;">▼</div>
+    <div class="flow-box" style="width:80%;">
+      <div class="orange">🎯 选题决策层</div>
+      <span class="small">30+关键词评分 → TOP 5选题 → 匹配模板</span>
+    </div>
+    <div style="color:var(--cyan);font-size:1.2em;">▼</div>
+    <div class="flow-box" style="width:80%;">
+      <div class="green">✍️ 内容生产层</div>
+      <span class="small">5套模板 → 30分钟出稿 → 检查清单</span>
+    </div>
+    <div style="color:var(--cyan);font-size:1.2em;">▼</div>
+    <div class="flow-box" style="width:80%;">
+      <div class="purple">📡 发布分发层</div>
+      <span class="small">公众号 → 小红书 → 即刻 | 数据追踪 + 选题追踪</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>第一层：信息采集</h2>
+  <br>
+  <p>覆盖 <strong class="cyan">22个RSS信息源</strong>，按优先级分类：</p>
+  <table>
+    <tr><th>优先级</th><th>类别</th><th>来源</th><th>数量</th></tr>
+    <tr><td>🔴 Critical</td><td>官方动态</td><td>OpenAI、Anthropic、DeepMind、Meta AI</td><td>4</td></tr>
+    <tr><td>🟡 High</td><td>科技媒体</td><td>The Verge、TechCrunch、Hacker News</td><td>8+</td></tr>
+    <tr><td>🟢 Medium</td><td>社区/论文</td><td>Reddit、ArXiv、GitHub Trending</td><td>5+</td></tr>
+    <tr><td>🔵 国内</td><td>中文资讯</td><td>量子位、机器之心、36氪、少数派</td><td>5+</td></tr>
+  </table>
+  <br>
+  <div class="highlight-box">
+    ⏰ 每天早8点自动拉取 → 生成每日简报 → <code>articles/briefs/brief-YYYYMMDD.md</code>
+  </div>
+</section>
+
+<section>
+  <h2>第二层：选题决策</h2>
+  <br>
+  <p><strong>三条核心标准：</strong></p>
+  <ol>
+    <li><strong class="orange">有热度</strong> — 24小时内被多个源报道</li>
+    <li><strong class="orange">有用户价值</strong> — 普通人看得懂、用得上</li>
+    <li><strong class="orange">能形成差异化观点</strong> — 不重复别人说过的</li>
+  </ol>
+  <br>
+  <div class="highlight-box">
+    <strong>30+ 关键词评分系统</strong>：标题中包含「发布」「开源」「对比」「教程」等词自动加分，<br>
+    来源优先级加权（critical +20分），中文内容额外加分
+  </div>
+</section>
+
+<section>
+  <h2>第三层：内容生产 — 5套模板</h2>
+  <br>
+  <table>
+    <tr><th>模板</th><th>栏目</th><th>发布时间</th><th>字数</th><th>爆款潜力</th></tr>
+    <tr><td>🔬 工具实测</td><td>周一</td><td style="color:var(--cyan);">tool-review</td><td>1500-2500</td><td>★★★☆</td></tr>
+    <tr><td>📖 手把手教程</td><td>周三</td><td style="color:var(--green);">tutorial</td><td>2000-3500</td><td>★★★★</td></tr>
+    <tr><td>⚔️ 横向对比</td><td>周五</td><td style="color:var(--orange);">comparison</td><td>2000-3000</td><td>★★★★★</td></tr>
+    <tr><td>💭 观点分析</td><td>灵活</td><td style="color:var(--red);">opinion</td><td>1500-2500</td><td>★★★★★</td></tr>
+    <tr><td>📰 AI周报</td><td>周日</td><td style="color:var(--purple);">news-roundup</td><td>1500-2500</td><td>★★★★</td></tr>
+  </table>
+  <br>
+  <p style="text-align:center;">
+    <span class="green">周一实测</span> → <span class="green">周三教程</span> → <span class="orange">周五对比/观点</span> → <span class="purple">周日周报</span>
+  </p>
+</section>
+
+<section>
+  <h2>每套模板包含什么</h2>
+  <br>
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon">📝</div>
+      <h4>5个标题公式</h4>
+      <p>直接套用，告别标题苦思</p>
+    </div>
+    <div class="card">
+      <div class="icon">📋</div>
+      <h4>逐段正文框架</h4>
+      <p>第一段写什么、第二段写什么…</p>
+    </div>
+    <div class="card">
+      <div class="icon">🖼️</div>
+      <h4>配图位置标注</h4>
+      <p>在哪个位置放什么截图</p>
+    </div>
+    <div class="card">
+      <div class="icon">✅</div>
+      <h4>发布检查清单</h4>
+      <p>5-6条，发之前逐项打勾</p>
+    </div>
+    <div class="card">
+      <div class="icon">🪝</div>
+      <h4>钩子设计</h4>
+      <p>评论区引导 + 下期预告</p>
+    </div>
+  </div>
+  <br>
+  <div class="highlight-box">
+    <strong>模板不是限制创意，而是保证质量下限。</strong><br>
+    确保即使状态不好的那天，产出也在60分以上。
+  </div>
+</section>
+
+<section>
+  <h2>第四层：发布与分发</h2>
+  <br>
+  <div class="flow-row">
+    <div class="flow-box" style="font-size:0.9em; padding:16px 24px;">📱 公众号发布<br><span class="small">主平台，深度长文</span></div>
+  </div>
+  <div style="text-align:center;font-size:1.2em;color:var(--cyan);">↙ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↘</div>
+  <div class="flow-row">
+    <div class="flow-box">📕 小红书短文版<br><span class="small">500-800字</span></div>
+    <div class="flow-box">💬 即刻 / 朋友圈<br><span class="small">社区互动</span></div>
+  </div>
+  <br>
+  <p><strong>发布后标准动作：</strong></p>
+  <ul>
+    <li>⏱️ 2小时内回复每条评论 <span class="small">（影响推荐权重）</span></li>
+    <li>📊 记录数据 <span class="small">（阅读量 / 转发数 / 收藏数）</span></li>
+    <li>🔄 打开率 >20% 时追加转发</li>
+  </ul>
+</section>
+
+<!-- ==================== 第三部分：工作流 ==================== -->
+<section class="section-slide">
+  <div class="section-num">03</div>
+  <h2>工作流演示</h2>
+  <p style="color:#aaa;">每天只需30分钟，三个脚本驱动</p>
+</section>
+
+<section>
+  <h2>每日工作流：30分钟</h2>
+  <br>
+  <table>
+    <tr><th>时间</th><th>动作</th><th>耗时</th><th>工具</th></tr>
+    <tr><td>08:00</td><td>📡 拉取22个RSS源，生成简报</td><td>5min</td><td><code>aggregator.js</code></td></tr>
+    <tr><td>08:05</td><td>🎯 扫读简报，挑选选题</td><td>5min</td><td>人工判断</td></tr>
+    <tr><td>08:10</td><td>✍️ 套用模板开始写正文</td><td>15min</td><td>5套模板</td></tr>
+    <tr><td>08:25</td><td>🖼️ 配图、排版、定时发布</td><td>5min</td><td>Canva / 公众号后台</td></tr>
+  </table>
+  <br>
+  <div class="highlight-box">
+    ⏱️ 从选题到发布：<strong class="cyan">30分钟</strong>｜传统方式：约2.5小时 ｜<strong class="green">效率提升55%</strong>
+  </div>
+</section>
+
+<section>
+  <h2>三个核心脚本</h2>
+  <br>
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon">📡</div>
+      <h4>aggregator.js</h4>
+      <p>RSS聚合器，从22个源拉取信息，按优先级排序，生成每日简报</p>
+      <code class="small">node scripts/aggregator.js --export</code>
+    </div>
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h4>daily_brief.js</h4>
+      <p>选题推荐器，关键词匹配+打分，自动匹配最佳模板，导出文章骨架</p>
+      <code class="small">node scripts/daily_brief.js --top 5</code>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h4>update_tracker.js</h4>
+      <p>话题追踪器，记录已覆盖选题和链接，追踪发文总量和频率</p>
+      <code class="small">node scripts/update_tracker.js --stats</code>
+    </div>
+  </div>
+  <br>
+  <p style="text-align:center;" class="small">技术栈：仅需1个npm包（rss-parser）· 无数据库 · 无后端 · Markdown驱动一切</p>
+</section>
+
+<!-- ==================== 第四部分：品牌体系 ==================== -->
+<section class="section-slide">
+  <div class="section-num">04</div>
+  <h2>品牌体系</h2>
+  <p style="color:#aaa;">从第一天就建立完整的品牌手册</p>
+</section>
+
+<section>
+  <h2>品牌调性</h2>
+  <br>
+  <div class="stat-row">
+    <div class="stat-item"><div class="stat-num" style="font-size:2em;">📊</div><div class="stat-label" style="font-size:0.9em;"><strong>真实</strong></div></div>
+    <div class="stat-item"><div class="stat-num" style="font-size:2em;">🔢</div><div class="stat-label" style="font-size:0.9em;"><strong>数据驱动</strong></div></div>
+    <div class="stat-item"><div class="stat-num" style="font-size:2em;">🤝</div><div class="stat-label" style="font-size:0.9em;"><strong>不装</strong></div></div>
+    <div class="stat-item"><div class="stat-num" style="font-size:2em;">🎯</div><div class="stat-label" style="font-size:0.9em;"><strong>有态度</strong></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>权威内容公式</h2>
+  <br>
+  <p>每篇文章必须至少命中 <strong class="cyan">5个锚点中的3个</strong>：</p>
+  <br>
+  <div class="card-grid">
+    <div class="card"><div class="icon">🔢</div><h4>具体数据</h4><p>用数字说话，不说"很多""非常"</p></div>
+    <div class="card"><div class="icon">🧪</div><h4>真机实测</h4><p>真实截图，不用官方PR图</p></div>
+    <div class="card"><div class="icon">📚</div><h4>引用来源</h4><p>引用原始来源，附链接</p></div>
+    <div class="card"><div class="icon">⚖️</div><h4>双面评价</h4><p>优缺点都说，不盲目吹捧</p></div>
+    <div class="card"><div class="icon">🗓️</div><h4>时效标注</h4><p>标注测试时间和工具版本号</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>视觉规范</h2>
+  <br>
+  <div class="two-col">
+    <div>
+      <h4>封面设计</h4>
+      <ul>
+        <li>深蓝/黑底 + 亮色文字</li>
+        <li>品牌色：<span class="cyan">#00D4FF</span> <span class="orange">#FF6B35</span></li>
+      </ul>
+      <br>
+      <h4>正文排版</h4>
+      <ul>
+        <li>15px 字号</li>
+        <li>1.75 行距</li>
+        <li>每300字配一张图</li>
+      </ul>
+    </div>
+    <div>
+      <h4>分类配色</h4>
+      <table>
+        <tr><td>🔬 实测</td><td style="color:var(--cyan);">蓝色</td></tr>
+        <tr><td>📖 教程</td><td style="color:var(--green);">绿色</td></tr>
+        <tr><td>⚔️ 对比</td><td style="color:var(--orange);">橙色</td></tr>
+        <tr><td>💭 观点</td><td style="color:var(--red);">红色</td></tr>
+        <tr><td>📰 周报</td><td style="color:var(--purple);">紫色</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 第五部分：成果 ==================== -->
+<section class="section-slide">
+  <div class="section-num">05</div>
+  <h2>成果数据</h2>
+  <p style="color:#aaa;">16天，14篇文章，从0到1</p>
+</section>
+
+<section>
+  <h2>关键数据</h2>
+  <br>
+  <div class="stat-row">
+    <div class="stat-item"><div class="stat-num">14</div><div class="stat-label">篇原创文章</div></div>
+    <div class="stat-item"><div class="stat-num">22</div><div class="stat-label">个RSS信息源</div></div>
+    <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">套标准化模板</div></div>
+    <div class="stat-item"><div class="stat-num">~30</div><div class="stat-label">分钟/天</div></div>
+  </div>
+  <br>
+  <table>
+    <tr><th>维度</th><th>数据</th></tr>
+    <tr><td>项目启动</td><td>2026年6月21日</td></tr>
+    <tr><td>发布时间线</td><td>连续16天日更（6/21 → 7/6）</td></tr>
+    <tr><td>固定栏目</td><td>5个（实测/教程/对比/观点/周报）</td></tr>
+    <tr><td>多平台分发</td><td>公众号 + 小红书 + 即刻</td></tr>
+    <tr><td>选题储备</td><td>8+待写选题 + 灵感池</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>代表性文章</h2>
+  <br>
+  <table>
+    <tr><th>类型</th><th>标题</th><th>数据表现</th></tr>
+    <tr><td>⚔️ 对比</td><td>DeepSeek vs ChatGPT vs 豆包：写公众号谁更强</td><td>对比类爆款</td></tr>
+    <tr><td>📖 教程</td><td>Vibe Coding全流程教程：不会写代码也能做App</td><td>教程类高收藏</td></tr>
+    <tr><td>💭 观点</td><td>AI这么强，初级程序员还有必要存在吗？</td><td>观点类高转发</td></tr>
+    <tr><td>🔬 实测</td><td>用AI做PPT的5个工具实测对比</td><td>350+行深度横评</td></tr>
+    <tr><td>📖 教程</td><td>用AI做小红书爆款封面（全流程）</td><td>痛点精准切入</td></tr>
+  </table>
+</section>
+
+<!-- ==================== 第六部分：未来规划 ==================== -->
+<section class="section-slide">
+  <div class="section-num">06</div>
+  <h2>未来规划</h2>
+  <p style="color:#aaa;">从工具到品牌的进化路径</p>
+</section>
+
+<section>
+  <h2>三段式路线图</h2>
+  <br>
+  <div class="card-grid">
+    <div class="card" style="border-top: 3px solid var(--green);">
+      <h4 style="color:var(--green);">🟢 近期</h4>
+      <p>
+        • 坚持日更，积累100篇原创<br>
+        • 小红书日均200+阅读<br>
+        • 建立读者社群
+      </p>
+    </div>
+    <div class="card" style="border-top: 3px solid var(--orange);">
+      <h4 style="color:var(--orange);">🟠 中期（5000粉后）</h4>
+      <p>
+        • 开启商业化（广告/付费内容）<br>
+        • AI工具深度测评合集<br>
+        • 行业分析报告
+      </p>
+    </div>
+    <div class="card" style="border-top: 3px solid var(--cyan);">
+      <h4 style="color:var(--cyan);">🔵 长期</h4>
+      <p>
+        • 升级为AI领域可信品牌<br>
+        • 建立AI工具评测数据库<br>
+        • 「选AI工具，看AI元思」
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>技术演进</h2>
+  <br>
+  <table>
+    <tr><th>阶段</th><th>目标</th><th>状态</th></tr>
+    <tr><td>Phase 1</td><td>模板 + 聚合 + 日历</td><td class="green">✅ 已完成</td></tr>
+    <tr><td>Phase 2</td><td>阅读数据分析 + 选题效果反馈闭环</td><td class="orange">🟡 规划中</td></tr>
+    <tr><td>Phase 3</td><td>AI辅助初稿生成（模板 + 素材 → 草稿）</td><td class="orange">🟡 规划中</td></tr>
+    <tr><td>Phase 4</td><td>多平台分发适配（知乎/掘金/头条）</td><td>⏳ 远期</td></tr>
+  </table>
+</section>
+
+<!-- ==================== 结语 ==================== -->
+<section class="section-slide">
+  <h2 style="font-size:2em;">总结</h2>
+  <br>
+  <p style="font-size:1em; color:#bbb;">
+    这个项目回答了三个问题：
+  </p>
+  <br>
+  <div class="highlight-box" style="font-size:1em;"><strong>写什么？</strong> → 聚合器 + 选题池 + 内容日历 → 永远不缺选题</div>
+  <div class="highlight-box" style="font-size:1em;"><strong>怎么写？</strong> → 5套模板 + 标题公式 + 检查清单 → 30分钟出稿</div>
+  <div class="highlight-box" style="font-size:1em;"><strong>怎么持续？</strong> → 固定节奏 + 追踪系统 + 月度复盘 → 日更不焦虑</div>
+</section>
+
+<section class="section-slide">
+  <h2>这套方法论适用于任何垂直内容赛道</h2>
+  <br>
+  <p style="color:#aaa;">信息采集自动化 → 模板驱动生产 → 品牌体系先行 → 多平台分发</p>
+</section>
+
+<!-- ==================== 金句 ==================== -->
+<section class="quote-box">
+  <blockquote>不用比别人聪明，只要比别人系统。</blockquote>
+  <p class="small">— AI元思</p>
+</section>
+
+<section class="quote-box">
+  <blockquote>内容的下限靠模板，上限靠判断。</blockquote>
+  <p class="small">— AI元思</p>
+</section>
+
+<section class="quote-box">
+  <blockquote>好的内容系统，让普通人也能持续产出60分以上的内容。</blockquote>
+  <p class="small">— AI元思</p>
+</section>
+
+<!-- ==================== 结尾 ==================== -->
+<section class="title-slide">
+  <h1>谢谢 🙏</h1>
+  <div class="subtitle">AI元思 · 项目介绍</div>
+  <br>
+  <div class="small">
+    📂 项目仓库：ai-wechat-channel<br>
+    📋 品牌手册：brand-kit.md<br>
+    📅 内容日历：content-calendar.md<br>
+    📕 小红书策略：xiaohongshu-strategy.md
+  </div>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    showSlideNumber: 'speaker',
+    center: false,
+    transition: 'slide',
+    transitionSpeed: 'default',
+    width: 1280,
+    height: 720,
+    margin: 0.05,
+  });
+</script>
+</body>
+</html>
