@@ -108,6 +108,12 @@
 | 81 | 星火X2.5-4B端侧模型实测：8GB塞进笔记本，断网也能用 | tool-review.md | ✅ 已写 | 9/14周一 |
 | 82 | 5款国产世界模型实测：AI生成世界，走到哪一步了 | comparison.md | ✅ 已写 | 9/15周二 |
 | 83 | 用AI做读书笔记教程：3步把一本书变成自己的知识 | tutorial.md | ✅ 已写 | 9/16周三 |
+| 84 | NeoHorse实测：首个Agent-Native模型，把工具调用烧进权重 | tool-review.md | ✅ 已写 | 9/17周四 |
+| 85 | Agent该烧进模型里，还是继续外挂？ | opinion.md | ✅ 已写 | 9/18周五 |
+| 86 | DeepSeek V4.1 Flash实测：Flash档把自家Pro挤下线 | tool-review.md | ✅ 已写 | 9/19周六 |
+| 87 | AI周报第12期｜Flash挤下Pro、书生-S2、NeoHorse | news-roundup.md | ✅ 已写 | 9/20周日 |
+| 88 | 书生-S2实测：科研多模态开源，35B和397B怎么选 | tool-review.md | ✅ 已写 | 9/21周一 |
+| 89 | LongCat-Flash-Omni实测：美团5600亿全模态开源 | tool-review.md | 📝 待写 | 9/22周二 | 9/21预告已锁定 |
 
 ### 💡 选题灵感（长期储备）
 
