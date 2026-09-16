@@ -113,7 +113,11 @@
 | 86 | DeepSeek V4.1 Flash实测：Flash档把自家Pro挤下线 | tool-review.md | ✅ 已写 | 9/19周六 |
 | 87 | AI周报第12期｜Flash挤下Pro、书生-S2、NeoHorse | news-roundup.md | ✅ 已写 | 9/20周日 |
 | 88 | 书生-S2实测：科研多模态开源，35B和397B怎么选 | tool-review.md | ✅ 已写 | 9/21周一 |
-| 89 | LongCat-Flash-Omni实测：美团5600亿全模态开源 | tool-review.md | 📝 待写 | 9/22周二 | 9/21预告已锁定 |
+| 89 | LongCat-Flash-Omni实测：美团5600亿全模态开源 | tool-review.md | ✅ 已写 | 9/22周二 | 9/21预告已锁定 |
+| 90 | 用AI把会议录音变成待办教程 | tutorial.md | ✅ 已写 | 9/23周三 | 接 LongCat Chat 入口 |
+| 91 | Gander 9B实测：腾讯混元语音开源全双工 | tool-review.md | ✅ 已写 | 9/24周四 | 9B vs 560B 另一条赛道 |
+| 92 | LongCat Omni vs Gander vs Qwen3-Omni对比 | comparison.md | ✅ 已写 | 9/25周五 | 全模态入口怎么选 |
+| 93 | Occamy-1.0实测：阿里Accio 35B/激活3B办公Agent | tool-review.md | 📝 待写 | 9/26周六 | 9/25预告已锁定 |
 
 ### 💡 选题灵感（长期储备）
 
