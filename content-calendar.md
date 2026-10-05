@@ -118,6 +118,9 @@
 | 91 | Gander 9B实测：腾讯混元语音开源全双工 | tool-review.md | ✅ 已写 | 9/24周四 | 9B vs 560B 另一条赛道 |
 | 92 | LongCat Omni vs Gander vs Qwen3-Omni对比 | comparison.md | ✅ 已写 | 9/25周五 | 全模态入口怎么选 |
 | 93 | Occamy-1.0实测：阿里Accio 35B/激活3B办公Agent | tool-review.md | 📝 待写 | 9/26周六 | 9/25预告已锁定 |
+| 94 | MiniMax M3.1 Flash（"Space Bunny"）实测：复现Opus 5.5绝活 | tool-review.md | ✅ 已写 | 10/05周一 |
+| 95 | 用AI做述职报告教程：3步写出让领导点头的晋升答辩 | tutorial.md | ✅ 已写 | 10/07周三 |
+| 96 | 个人智能体来了：OpenAI、Meta、字节都在抢你的电脑 | opinion.md | ✅ 已写 | 10/09周五 |
 
 ### 💡 选题灵感（长期储备）
 
